@@ -1,0 +1,77 @@
+.Hero {
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    background: linear-gradient(135deg,
+            #edede9,
+            #f5ebe0);
+}
+
+.Hero-left {
+    width: 60%;
+}
+
+.Hero-left h1 {
+    font-size: 4rem;
+    color: #3b3028;
+    line-height: 1.1;
+}
+
+.Hero-left p {
+
+    margin: 25px 0;
+
+    font-size: 1.1rem;
+
+    color: #6d6258;
+
+    line-height: 1.7;
+}
+
+.Hero-left button {
+
+    background: #d5bdaf;
+
+    color: #2d2d2d;
+
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.Hero-left button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+    background: #c8b0a2;
+}
+
+.Hero-right {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Hero-right img {
+    width: 75%;
+    max-width: 380px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.Hero-right img:hover {
+    transform: scale(1.05);
+}
