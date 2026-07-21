@@ -1,0 +1,16 @@
+.products {
+    padding: 4rem 8%;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
