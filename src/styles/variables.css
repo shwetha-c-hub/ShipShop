@@ -1,0 +1,14 @@
+:root {
+    --bg-color: #EDEDE9;
+    --navbar-color: #E3D5CA;
+    --card-color: #F5EBE0;
+    --hover-color: #D6CCC2;
+    --accent-color: #D5BDAF;
+
+    --text-color: #3F3A36;
+    --white: #ffffff;
+
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    --transition: 0.3s ease;
+}
