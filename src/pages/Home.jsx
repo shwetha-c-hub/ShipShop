@@ -1,10 +1,14 @@
-import Hero from "../Components/Hero";
+import Hero from "../components/Hero";
+import Categories from "../components/Categories";
+import Products from "../components/Products";
 
 function Home() {
     return (
-        <div>
+        <>
             <Hero />
-        </div>
+            <Categories />
+            <Products />
+        </>
     );
 }
 

@@ -1,16 +1,23 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Categories from "./components/Categories";
-import Products from "./components/Products";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import Cart from "./pages/Cart";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Hero />
-      <Categories />
-      <Products />
-    </div>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </>
   );
 }
 

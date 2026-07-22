@@ -3,10 +3,14 @@ import { FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 
 function Navbar() {
     const { cart } = useContext(CartContext);
+    const totalItems = cart.reduce((total, item) => {
+        return total + item.quantity;
+    }, 0);
     return (
         <nav>
             <h2 className="logo"><span>Ship</span>Shop</h2>
@@ -17,14 +21,17 @@ function Navbar() {
             </div>
 
             <ul className="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/shop">Shop</Link></li>
             </ul>
 
             <div className="nav-icons">
                 <button><FaHeart /></button>
-                <button><span>🛒 {cart.length}</span></button>
-                <button><FaUser /> Login</button>
+                <button><Link to="/cart" className="cart-btn">
+                    <FaShoppingCart />
+                    <span>{totalItems}</span>
+                </Link></button>
+                <button><Link to="/login">Login</Link></button>
             </div>
         </nav>
 
