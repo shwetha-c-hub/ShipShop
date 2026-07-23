@@ -33,7 +33,10 @@ function Navbar({ search, setSearch }) {
             </ul>
 
             <div className="nav-icons">
-                <button><FaHeart /> {wishlist.length}</button>
+                <Link to="/wishlist" className="wishlist-link">
+                    <FaHeart />
+                    <span>{wishlist.length}</span>
+                </Link>
                 <button><Link to="/cart" className="cart-btn">
                     <FaShoppingCart />
                     <span>{totalItems}</span>

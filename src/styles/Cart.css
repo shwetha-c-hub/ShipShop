@@ -113,3 +113,34 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+.empty-cart {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.empty-cart h1 {
+    color: var(--navbar-color);
+}
+
+.empty-cart p {
+    color: #777;
+}
+
+.empty-cart button {
+    padding: 14px 30px;
+    background: var(--navbar-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.empty-cart button:hover {
+    background: var(--hover-color);
+}

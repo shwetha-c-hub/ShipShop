@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import "../styles/Cart.css";
+import { Link } from "react-router-dom";
 
 function Cart() {
     const {
@@ -9,7 +10,21 @@ function Cart() {
         increaseQuantity,
         decreaseQuantity,
     } = useContext(CartContext);
+    if (cart.length === 0) {
+        return (
+            <div className="empty-cart">
+                <h1>🛒 Your cart is empty</h1>
 
+                <p>
+                    Looks like you haven't added anything yet.
+                </p>
+
+                <Link to="/shop">
+                    <button>Start Shopping</button>
+                </Link>
+            </div>
+        );
+    }
     if (cart.length === 0) {
         return <h2>Your cart is empty 🛒</h2>;
     }

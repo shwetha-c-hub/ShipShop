@@ -6,7 +6,8 @@ import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import { useState } from "react";
-
+import Wishlist from "./pages/Wishlist";
+import Footer from "./components/Footer";
 function App() {
   const [search, setSearch] = useState("");
   <Route
@@ -21,6 +22,7 @@ function App() {
       />
 
       <Routes>
+
         <Route
           path="/"
           element={<Home search={search} />}
@@ -33,7 +35,17 @@ function App() {
           path="/shop"
           element={<Shop search={search} />}
         />
+        <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
+      <>
+
+
+        <Routes>
+          {/* all your routes */}
+        </Routes>
+
+        <Footer />
+      </>
     </>
   );
 }
