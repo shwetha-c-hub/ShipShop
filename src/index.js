@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import "./styles/index.css";
 import App from './App';
 import CartProvider from "./context/CartContext";
+import WishlistProvider from "./context/WishlistContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,7 +12,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <CartProvider>
-        <App />
+        <WishlistProvider>
+          <App />
+        </WishlistProvider>
       </CartProvider>
     </BrowserRouter>
   </React.StrictMode>

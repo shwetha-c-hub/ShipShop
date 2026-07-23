@@ -61,3 +61,10 @@
 .product-info button:hover {
     background: var(--hover-color);
 }
+
+.product-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}

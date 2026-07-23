@@ -8,25 +8,25 @@ import Footwear from '../assets/Footware.jpg';
 const products = [
     {
         id: 1,
-        name: "Tops",
+        name: "Top",
         price: 29.99,
         image: Tops
     },
     {
         id: 2,
-        name: "Bottoms",
+        name: "Bottom",
         price: 39.99,
         image: Bottoms
     },
     {
         id: 3,
-        name: "Jackets",
+        name: "Jacket",
         price: 59.99,
         image: jackets
     },
     {
         id: 4,
-        name: "Dresses",
+        name: "Dress",
         price: 49.99,
         image: Dresses
     },

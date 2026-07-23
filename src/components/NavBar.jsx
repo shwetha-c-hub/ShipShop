@@ -4,10 +4,12 @@ import { IoSearch } from "react-icons/io5";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import { WishlistContext } from "../context/WishlistContext";
 
 
-function Navbar() {
+function Navbar({ search, setSearch }) {
     const { cart } = useContext(CartContext);
+    const { wishlist } = useContext(WishlistContext);
     const totalItems = cart.reduce((total, item) => {
         return total + item.quantity;
     }, 0);
@@ -17,7 +19,12 @@ function Navbar() {
 
             <div className="search-bar">
                 <IoSearch />
-                <input type="text" placeholder="Search items..." />
+                <input
+                    type="text"
+                    placeholder="Search items..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
             </div>
 
             <ul className="nav-links">
@@ -26,7 +33,7 @@ function Navbar() {
             </ul>
 
             <div className="nav-icons">
-                <button><FaHeart /></button>
+                <button><FaHeart /> {wishlist.length}</button>
                 <button><Link to="/cart" className="cart-btn">
                     <FaShoppingCart />
                     <span>{totalItems}</span>

@@ -1,20 +1,29 @@
 import "../styles/ProductCard.css";
+import "../styles/WishList-btn.css"
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { WishlistContext } from "../context/WishlistContext";
 
-function ProductCard(props) {
+function ProductCard({ id, name, price, image }) {
     const { addToCart } = useContext(CartContext);
+    const { wishlist, addToWishlist, removeFromWishlist } =
+        useContext(WishlistContext);
+    const isWishlisted = wishlist.some(item => item.id === id);
     return (
         <div className="product-card">
 
-            <img src={props.image} alt={props.name} />
+            <img src={image} alt={name} />
 
-            <h3>{props.name}</h3>
+            <h3>{name}</h3>
 
-            <p className="price">₹{props.price}</p>
+            <p className="price">₹{price}</p>
 
             <button
-                onClick={() => addToCart(props)}
+                className="add-cart-btn"
+                onClick={(e) => {
+                    e.preventDefault();
+                    addToCart({ id, name, price, image });
+                }}
             >
                 Add to Cart
             </button>

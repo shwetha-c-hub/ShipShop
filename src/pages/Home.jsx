@@ -2,12 +2,12 @@ import Hero from "../components/Hero";
 import Categories from "../components/Categories";
 import Products from "../components/Products";
 
-function Home() {
+function Home({ search }) {
     return (
         <>
             <Hero />
             <Categories />
-            <Products />
+            <Products search={search} />
         </>
     );
 }
