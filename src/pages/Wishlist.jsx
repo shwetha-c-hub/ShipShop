@@ -9,7 +9,7 @@ function Wishlist() {
     if (wishlist.length === 0) {
         return (
             <div className="empty-wishlist">
-                <h1>🤍 Your wishlist is empty</h1>
+                <h1>Your wishlist is empty</h1>
 
                 <p>
                     Save your favorite products here.
