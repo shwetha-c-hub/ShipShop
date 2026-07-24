@@ -4,24 +4,13 @@ ShipShop is a modern e-commerce web application built with React. It provides a 
 
 ## 🚀 Live Demo
 
-🔗 **Live Website:** https://your-vercel-link.vercel.app
+🔗Live Demo: https://ship-shop-yoj9.vercel.app
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshot
 
-### Home Page
-![Home](./screenshots/home.png)
-
-### Product Details
-![Product Details](./screenshots/product-details.png)
-
-### Shopping Cart
-![Cart](./screenshots/cart.png)
-
-### Wishlist
-![Wishlist](./screenshots/wishlist.png)
-
+![ShipShop Home](image.png)
 ---
 
 ## ✨ Features
@@ -62,6 +51,6 @@ ShipShop is a modern e-commerce web application built with React. It provides a 
 **Shwetha C**
 
 - GitHub: https://github.com/shwetha-c-hub
-- LinkedIn: https://www.linkedin.com/in/your-linkedin-profile/
+- LinkedIn: http://linkedin.com/in/shwetha-c-2a2ba1357
 
 ---
