@@ -34,6 +34,7 @@ ShipShop is a modern e-commerce web application built with React. It provides a 
 - Context API
 - HTML5
 - CSS3
+
 ## 💡 Future Improvements
 
 - User Authentication
