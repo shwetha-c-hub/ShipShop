@@ -2,13 +2,11 @@ import "../styles/ProductCard.css";
 import "../styles/WishList-btn.css"
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { WishlistContext } from "../context/WishlistContext";
+
 
 function ProductCard({ id, name, price, image }) {
     const { addToCart } = useContext(CartContext);
-    const { wishlist, addToWishlist, removeFromWishlist } =
-        useContext(WishlistContext);
-    const isWishlisted = wishlist.some(item => item.id === id);
+
     return (
         <div className="product-card">
 

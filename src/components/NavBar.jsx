@@ -1,15 +1,15 @@
 import "../styles/Navbar.css";
-import { FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
-import { WishlistContext } from "../context/WishlistContext";
+
 
 
 function Navbar({ search, setSearch }) {
     const { cart } = useContext(CartContext);
-    const { wishlist } = useContext(WishlistContext);
+
     const totalItems = cart.reduce((total, item) => {
         return total + item.quantity;
     }, 0);
@@ -37,11 +37,14 @@ function Navbar({ search, setSearch }) {
                     <FaHeart />
 
                 </Link>
-                <button><Link to="/cart" className="cart-btn">
+                <Link to="/cart" className="cart-btn">
                     <FaShoppingCart />
                     <span>{totalItems}</span>
-                </Link></button>
-                <button><Link to="/login">Login</Link></button>
+                </Link>
+
+                <Link to="/login" className="login-btn">
+                    Login
+                </Link>
             </div>
         </nav>
 
