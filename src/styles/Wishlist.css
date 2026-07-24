@@ -22,7 +22,7 @@
     padding: 20px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: var(--navbar--color);
+    box-shadow: var(--shadow);
 }
 
 .wishlist-card:hover {
